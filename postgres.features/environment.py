@@ -31,3 +31,7 @@ def before_all(context):
 	password='postgres'\
 	");
 
+def after_all(context):
+    context.conn.rollback()
+
+
